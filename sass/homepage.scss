@@ -1,20 +1,55 @@
 // ****************** fonts **************************
 @font-face {
   font-family: "Shrikhand";
-  src: url(./assets/fonts/Shrikhand-Regular.ttf);
+  src: url(../assets/fonts/Shrikhand-Regular.ttf);
 }
 @font-face {
   font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-Regular.ttf);
+  src: url(../assets/fonts/Roboto-Regular.ttf);
 }
 
 // ***************** variables ***********************
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
-$font-logo-title: "Roboto";
-$font-text: "Shrikhand";
+$font-logo-title: "Shrikhand";
+$font-text: "Roboto";
 
+// ***************** homepage *************************
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $font-text;
+}
+.main {
+  height: 100%;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo {
+    width: 11rem;
+  }
+}
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #f3f3f3;
+  box-shadow: inset 0px 11px 8px -10px #ccc;
+  &__p {
+    margin-left: 40px;
+  }
 }
