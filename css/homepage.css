@@ -48,4 +48,44 @@ body {
   margin-left: 40px;
 }
 
+.explor {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+}
+.explor__buttonContainer {
+  padding: 1.5rem 0 0 0;
+}
+.explor__button {
+  color: white;
+  background-color: #ff79da;
+  border-radius: 30px 30px;
+  padding: 1rem;
+  transition: background-color 200ms;
+  border: none;
+  background-image: linear-gradient(-10deg, #9356dc, #ff79da);
+}
+.explor__button:hover {
+  background-color: white;
+  box-shadow: 2px 5px 10px 0.5px #ccc;
+}
+
+.functionning {
+  background-color: white;
+  /* background-color: $primary-color;
+    content: counter(compteListe);
+    counter-increment: compteListe 1;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;*/
+}
+.functionning__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 /*# sourceMappingURL=homepage.css.map */

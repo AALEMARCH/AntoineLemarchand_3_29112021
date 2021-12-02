@@ -53,3 +53,42 @@ body {
     margin-left: 40px;
   }
 }
+.explor {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+  &__buttonContainer {
+    padding: 1.5rem 0 0 0;
+  }
+  &__button {
+    color: white;
+    background-color: $secondary-color;
+    border-radius: 30px 30px;
+    padding: 1rem;
+    transition: background-color 200ms;
+    border: none;
+    background-image: linear-gradient(-10deg, $primary-color, $secondary-color);
+    &:hover {
+      background-color: lighten($secondary-color, 60%);
+      box-shadow: 2px 5px 10px 0.5px #ccc;
+    }
+  }
+}
+.functionning {
+  background-color: white;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* background-color: $primary-color;
+    content: counter(compteListe);
+    counter-increment: compteListe 1;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100%;*/
+}
