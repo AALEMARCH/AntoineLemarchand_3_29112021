@@ -45,7 +45,7 @@ body {
   box-shadow: inset 0px 11px 8px -10px #ccc;
 }
 .location__p {
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
 .explor {
@@ -67,6 +67,7 @@ body {
   transition: background-color 200ms;
   border: none;
   background-image: linear-gradient(-10deg, #9356dc, #ff79da);
+  cursor: pointer;
 }
 .explor__button:hover {
   background-color: white;
@@ -75,17 +76,113 @@ body {
 
 .functionning {
   background-color: white;
-  /* background-color: $primary-color;
-    content: counter(compteListe);
-    counter-increment: compteListe 1;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100%;*/
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0;
 }
 .functionning__list {
-  display: flex;
-  flex-direction: row;
   align-items: center;
+  counter-reset: number;
+}
+.functionning__listCards {
+  background-color: #fafafa;
+  margin: 1rem;
+  padding: 1rem 1rem 1rem 0;
+  border-radius: 15px;
+  box-shadow: 0px 2px 11px -1px #ccc;
+  cursor: pointer;
+  list-style-type: none;
+  counter-increment: number;
+}
+.functionning__listCards:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.functionning__listCards:before {
+  content: counter(number);
+  background: #9356dc;
+  border-radius: 100%;
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  position: absolute;
+  margin: -0.2rem 2rem 0rem -0.7rem;
+  align-items: center;
+  justify-content: center;
+}
+.functionning__listIcon {
+  padding: 0 1rem 0 2rem;
+}
+
+.cards {
+  background-color: #fafafa;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+}
+.cards__container {
+  height: 100%;
+  border-radius: 15px 15px;
+  background: white;
+  margin: 1.5rem 0 1.5rem 0;
+  box-shadow: 0px 2px 11px -1px #ccc;
+}
+.cards__picturesContainer {
+  position: relative;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 10rem;
+  min-height: 67%;
+  max-height: 67%;
+}
+.cards__pict {
+  position: absolute;
+  border-radius: 15px 15px 0 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards__textArea {
+  background: white;
+  border-radius: 0 0 15px 15px;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.cards__heart {
+  font-size: 1.5rem;
+}
+
+footer {
+  padding: 1.5rem;
+  color: white;
+  background: #353535;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+.footer__title {
+  font-family: "Shrikhand";
+  font-weight: lighter;
+  padding: 0 0 1.5rem 0;
+}
+.footer__text {
+  padding: 0 0 0.5rem 0;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__logo {
+  margin: 0 0.5rem 0 0;
 }
 
 /*# sourceMappingURL=homepage.css.map */
