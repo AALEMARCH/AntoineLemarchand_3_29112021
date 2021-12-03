@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
+    <body>
+        <!--  
+        <div class="loader__container">
+            <div class="loader"></div>
+        </div>-->
+
     <header class="banner">
         <h1 class="banner__title"><img src="assets/logo/ohmyfood.png" alt="ohmyfood" class="banner__logo"></h1>
     </header>
@@ -62,52 +67,60 @@
             <div class="cards">
                 <h2>Restaurant</h2>
                 <div class="cards__container">
-                    <div class="cards__picturesContainer">
-                        <img src="assets/palette.jpg" alt="" class="cards__pict">
-                    </div>
-                    <div class="cards__textArea">
-                        <div class="cards__text">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
+                    <a class="cards__link" href="laPaletteDuGout.html">
+                        <div class="cards__picturesContainer">
+                            <img src="assets/palette.jpg" alt="" class="cards__pict">
                         </div>
-                        <i class="far fa-heart cards__heart"></i>
-                    </div>
+                        <div class="cards__textArea">
+                            <div class="cards__text">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="far fa-heart cards__heart"></i>
+                        </div>
+                    </a>
                 </div>
                 <div class="cards__container">
-                    <div class="cards__picturesContainer">
-                        <img src="assets/note.jpg" alt="" class="cards__pict">
-                    </div>
-                    <div class="cards__textArea">
-                        <div class="cards__text">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
+                    <a href="laNoteEnchantee.html">
+                        <div class="cards__picturesContainer">
+                            <img src="assets/note.jpg" alt="" class="cards__pict">
                         </div>
-                        <i class="far fa-heart cards__heart"></i>
-                    </div>
+                        <div class="cards__textArea">
+                            <div class="cards__text">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="far fa-heart cards__heart"></i>
+                        </div>
+                    </a>
                 </div>
                 <div class="cards__container">
-                    <div class="cards__picturesContainer">
-                        <img src="assets/francaise.jpg" alt="" class="cards__pict">
-                    </div>
-                    <div class="cards__textArea">
-                        <div class="cards__text">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
+                    <a href="aLaFrancaise.html">
+                        <div class="cards__picturesContainer">
+                            <img src="assets/francaise.jpg" alt="" class="cards__pict">
                         </div>
-                        <i class="far fa-heart cards__heart"></i>
-                    </div>
+                        <div class="cards__textArea">
+                            <div class="cards__text">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="far fa-heart cards__heart"></i>
+                        </div>
+                    </a>
                 </div>
                 <div class="cards__container">
-                    <div class="cards__picturesContainer">
-                        <img src="assets/louis.jpg" alt="" class="cards__pict">
-                    </div>
-                    <div class="cards__textArea">
-                        <div class="cards__text">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
+                    <a href="leDeliceDesSens.html">
+                        <div class="cards__picturesContainer">
+                            <img src="assets/louis.jpg" alt="" class="cards__pict">
                         </div>
-                        <i class="far fa-heart cards__heart"></i>
-                    </div>
+                        <div class="cards__textArea">
+                            <div class="cards__text">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="far fa-heart cards__heart"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -127,7 +140,7 @@
                 <a href="#" class="footer__link">Mentions légales</a>
             </div>
             <div class="footer__text">
-                <a href="#" class="footer__link">Contact</a>
+                <a href="mailto:lemarchand.antoine00@gmail.com" target="_blank" class="footer__link">Contact</a>
             </div>
         </div>
     </footer>
