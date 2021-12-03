@@ -192,22 +192,20 @@ body {
 }
 
 .nav {
-  font-family: "Roboto";
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: 20%;
   justify-content: center;
 }
-.nav__title {
-  text-align: center;
+.nav__containerIcon {
+  cursor: pointer;
 }
-.nav__logo {
-  width: 11rem;
+.nav__icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
-.link {
-  cursor: pointer;
+.nav__logo {
+  width: 11rem;
 }
 
 .menu__pict {
@@ -229,7 +227,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 1.2rem;
+  margin: 0 2rem 2rem 0;
   font-family: "Shrikhand";
   font-weight: 100;
 }
@@ -237,16 +235,45 @@ body {
   font-size: 2rem;
 }
 
-.enter {
+.food {
+  margin-bottom: 2.5rem;
+}
+.food__title {
   font-family: "Roboto";
   text-transform: uppercase;
   text-decoration: underline 3.5px #99e2d0;
 }
 
+.meals {
+  height: 100%;
+  width: 100%;
+}
+.meals__container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 1rem 0 1rem 0;
+  box-shadow: 0px 2px 11px -1px #ccc;
+}
+.meals__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blockText {
+  display: block;
+  text-overflow: Ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
 .button {
   display: flex;
   justify-content: center;
-  padding: 1.5rem 0 2rem 0;
+  margin: 1.5rem 0 2rem 0;
 }
 .button__command {
   color: white;
@@ -262,22 +289,6 @@ body {
 .button__command:hover {
   background-color: white;
   box-shadow: 2px 5px 10px 0.5px #ccc;
-}
-
-.entries {
-  height: 100%;
-  width: 100%;
-}
-.entries__container {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border-radius: 15px;
-  padding: 0.5rem;
-}
-.entries__text {
-  display: flex;
-  justify-content: space-between;
 }
 
 /*# sourceMappingURL=homepage.css.map */
