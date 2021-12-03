@@ -91,6 +91,21 @@ h2 {
     }
   }
 }
+.entries {
+  height: 100%;
+  width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0.5rem;
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .footer {
   padding: 1.5rem;
   color: white;

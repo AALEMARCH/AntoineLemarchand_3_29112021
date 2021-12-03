@@ -23,6 +23,11 @@ $font-text: "Roboto";
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
 body {
   font-family: $font-text;
 }

@@ -87,6 +87,22 @@ h2 {
   box-shadow: 2px 5px 10px 0.5px #ccc;
 }
 
+.entries {
+  height: 100%;
+  width: 100%;
+}
+.entries__container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+.entries__text {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer {
   padding: 1.5rem;
   color: white;
