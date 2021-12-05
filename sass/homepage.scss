@@ -17,6 +17,17 @@ $shadow: #ccc;
 $font-logo-title: "Shrikhand";
 $font-text: "Roboto";
 
+//******************* mixins **************************
+@mixin linearText {
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(-10deg, $primary-color, $secondary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin linearGradient {
+  background-image: linear-gradient(-10deg, $primary-color, $secondary-color);
+}
+
 // ***************** homepage *************************
 * {
   box-sizing: border-box;
@@ -77,7 +88,7 @@ body {
     padding: 1rem;
     transition: background-color 200ms;
     border: none;
-    background-image: linear-gradient(-10deg, $primary-color, $secondary-color);
+    @include linearGradient;
     cursor: pointer;
     &:hover {
       background-color: lighten($secondary-color, 60%);
@@ -150,19 +161,14 @@ body {
     object-fit: cover;
   }
 }
-.cards {
-  &__textArea {
-    background: white;
-    border-radius: 0 0 15px 15px;
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    align-items: center;
-  }
-  &__heart {
-    font-size: 1.5rem;
-  }
+.cards__textArea {
+  background: white;
+  border-radius: 0 0 15px 15px;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
 }
 
 .footer {
@@ -232,8 +238,19 @@ body {
     font-family: $font-logo-title;
     font-weight: 100;
   }
-  &__heart {
-    font-size: 2rem;
+}
+.heartBase {
+  font-size: 1.5rem;
+  padding: 0.2em;
+  transition: transform 200ms;
+  &:hover {
+    @include linearText;
+    background-color: $fortiary-color;
+    padding: -0.2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+    transform: scale(1.1);
   }
 }
 .food {
@@ -280,7 +297,7 @@ body {
     padding: 1rem 2.5rem;
     transition: background-color 200ms;
     border: none;
-    background-image: linear-gradient(-10deg, $primary-color, $secondary-color);
+    @include linearGradient;
     cursor: pointer;
     &:hover {
       background-color: lighten($secondary-color, 60%);

@@ -156,9 +156,6 @@ body {
   padding: 1rem;
   align-items: center;
 }
-.cards__heart {
-  font-size: 1.5rem;
-}
 
 .footer {
   padding: 1.5rem;
@@ -231,8 +228,23 @@ body {
   font-family: "Shrikhand";
   font-weight: 100;
 }
-.main__heart {
-  font-size: 2rem;
+
+.heartBase {
+  font-size: 1.5rem;
+  padding: 0.2em;
+  transition: transform 200ms;
+}
+.heartBase:hover {
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(-10deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #fafafa;
+  padding: -0.2em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+  transform: scale(1.1);
 }
 
 .food {
