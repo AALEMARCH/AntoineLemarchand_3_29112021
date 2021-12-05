@@ -102,6 +102,9 @@ body {
 .functionning__listCards:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
+.functionning__listCards:hover :nth-child(2n+1) {
+  color: #9356dc;
+}
 .functionning__listCards:before {
   content: counter(number);
   background: #9356dc;
@@ -249,11 +252,14 @@ body {
 
 .food {
   margin-bottom: 2.5rem;
+  font-family: "Roboto";
 }
 .food__title {
-  font-family: "Roboto";
   text-transform: uppercase;
-  text-decoration: underline 3.5px #99e2d0;
+}
+.food__line {
+  border-bottom: 3.5px solid #99e2d0;
+  padding-bottom: 2px;
 }
 
 .meals {
@@ -262,7 +268,8 @@ body {
 }
 .meals__container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   padding: 0.5rem;
@@ -271,15 +278,29 @@ body {
 }
 .meals__text {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  padding: 0.2rem 0 0 0.2rem;
+}
+.meals__price {
+  padding: 2rem 1rem 0 1rem;
+  font-weight: bold;
 }
 
 .blockText {
-  display: block;
-  text-overflow: Ellipsis;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-  text-decoration: none;
+  flex-grow: 1;
+}
+
+.blockAnim {
+  background: #99e2d0;
+  color: white;
+  width: 0;
+  overflow: hidden;
 }
 
 .button {
