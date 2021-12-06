@@ -59,6 +59,7 @@ a {
 body {
   font-family: $font-text;
 }
+
 .main {
   height: 100%;
 }
@@ -230,6 +231,9 @@ body {
 }
 .nav {
   @include flexbox();
+  @media screen and(min-width: 992px) {
+    background-color: white;
+  }
   &__containerIcon {
     cursor: pointer;
   }
@@ -255,6 +259,11 @@ body {
   background-color: $fortiary-color;
   z-index: 1;
   position: relative;
+  @media screen and(min-width: 992px) {
+    width: 90%;
+    margin: -4rem auto auto auto;
+    border-radius: 2rem 2rem;
+  }
   &__header {
     display: flex;
     justify-content: space-between;
@@ -282,6 +291,11 @@ body {
 .food {
   margin-bottom: 2.5rem;
   font-family: $font-text;
+  @media screen and(min-width: 992px) {
+    @include flexbox();
+    gap: 5rem;
+    justify-content: space-between;
+  }
   &__title {
     text-transform: uppercase;
   }
@@ -293,6 +307,10 @@ body {
 .meals {
   height: 100%;
   width: 100%;
+  @media screen and(min-width: 992px) {
+    width: 75%;
+    margin-right: 3rem;
+  }
   &__container {
     display: flex;
     flex-direction: row;
@@ -340,5 +358,10 @@ body {
       background-color: lighten($secondary-color, 60%);
       @include boxShadow(2px 5px 10px 0.5px $color-shadow);
     }
+  }
+}
+@media screen and(min-width: 992px) {
+  .responsive {
+    background-color: #353535;
   }
 }

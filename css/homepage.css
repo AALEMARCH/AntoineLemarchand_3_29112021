@@ -223,6 +223,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .nav {
+    background-color: white;
+  }
+}
 .nav__containerIcon {
   cursor: pointer;
 }
@@ -250,6 +255,13 @@ body {
   background-color: #fafafa;
   z-index: 1;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    width: 90%;
+    margin: -4rem auto auto auto;
+    border-radius: 2rem 2rem;
+  }
 }
 .main__header {
   display: flex;
@@ -283,6 +295,15 @@ body {
   margin-bottom: 2.5rem;
   font-family: "Roboto";
 }
+@media screen and (min-width: 992px) {
+  .food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
+  }
+}
 .food__title {
   text-transform: uppercase;
 }
@@ -294,6 +315,12 @@ body {
 .meals {
   height: 100%;
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .meals {
+    width: 75%;
+    margin-right: 3rem;
+  }
 }
 .meals__container {
   display: flex;
@@ -351,6 +378,12 @@ body {
 .button__command:hover {
   background-color: white;
   box-shadow: 2px 5px 10px 0.5px #ccc;
+}
+
+@media screen and (min-width: 992px) {
+  .responsive {
+    background-color: #353535;
+  }
 }
 
 /*# sourceMappingURL=homepage.css.map */
