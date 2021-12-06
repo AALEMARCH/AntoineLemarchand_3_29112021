@@ -48,7 +48,7 @@ $shadow: 0px 2px 11px -1px $color-shadow;
   content: "";
   position: absolute;
   border-radius: 50%;
-  border-left: 4px solid transparent;
+  border-left: 5px solid transparent;
   top: 10px;
   left: 10px;
   right: 10px;
@@ -78,17 +78,17 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba($color: $fortiary-color, $alpha: 0.9);
+  background: rgba($color: white, $alpha: 0.4);
   @include flexbox();
   overflow: hidden;
   animation: loader 2.5s forwards;
   &__container {
     display: block;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     border-radius: 100%;
-    border-top: 4px solid transparent;
+    border-top: 5px solid transparent;
     border-color: $primary-color;
     animation: spin 2.5s linear infinite;
     &::before {
@@ -158,6 +158,8 @@ body {
   @media screen and(min-width: 992px) {
     height: 100%;
     justify-content: center;
+    border-right: 3px solid #f3f3f3;
+    border-bottom: 10px solid #f3f3f3;
   }
   &__buttonContainer {
     padding: 1.5rem 0 0 0;
@@ -183,10 +185,15 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    border-left: 3px solid #f3f3f3;
+    border-bottom: 10px solid #f3f3f3;
   }
   &__list {
     align-items: center;
     counter-reset: number;
+    @media screen and (min-width: 992px) {
+      width: 80%;
+    }
   }
   &__listCards {
     background-color: $fortiary-color;
@@ -197,9 +204,6 @@ body {
     cursor: pointer;
     list-style-type: none;
     counter-increment: number;
-    @media screen and (min-width: 992px) {
-      width: 100%;
-    }
     &:hover {
       background-color: rgba($primary-color, $alpha: 0.1);
       & :nth-child(2n + 1) {
@@ -283,7 +287,7 @@ body {
   background: #353535;
   display: flex;
   flex-direction: column;
-  @media screen and(min-width: 992px) {
+  @media screen and(min-width: 768px) {
     align-items: center;
   }
   &__title {
@@ -354,6 +358,14 @@ body {
     font-family: $font-logo-title;
     font-weight: 100;
   }
+  &__container {
+    @media screen and(min-width: 1450px) {
+      @include flexbox();
+      justify-content: space-evenly;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+  }
 }
 .heartBase {
   font-size: 1.5rem;
@@ -374,9 +386,7 @@ body {
   margin-bottom: 2.5rem;
   font-family: $font-text;
   @media screen and(min-width: 992px) {
-    @include flexbox();
-    gap: 5rem;
-    justify-content: space-between;
+    width: 100%;
   }
   &__title {
     text-transform: uppercase;
@@ -389,10 +399,6 @@ body {
 .meals {
   height: 100%;
   width: 100%;
-  @media screen and(min-width: 992px) {
-    width: 75%;
-    margin-right: 3rem;
-  }
   &__container {
     display: flex;
     flex-direction: row;
@@ -448,7 +454,7 @@ body {
   }
 }
 @media screen and(min-width: 992px) {
-  article {
+  nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
