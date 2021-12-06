@@ -13,9 +13,10 @@ $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 $fortiary-color: #fafafa;
-$shadow: #ccc;
 $font-logo-title: "Shrikhand";
 $font-text: "Roboto";
+$color-shadow: #ccc;
+$shadow: 0px 2px 11px -1px $color-shadow;
 
 //******************* mixins **************************
 @mixin linearText {
@@ -26,6 +27,14 @@ $font-text: "Roboto";
 }
 @mixin linearGradient {
   background-image: linear-gradient(-10deg, $primary-color, $secondary-color);
+}
+@mixin boxShadow($params) {
+  box-shadow: $params;
+}
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // ***************** homepage *************************
@@ -46,27 +55,27 @@ body {
   height: 100%;
 }
 .banner {
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
+  @include flexbox();
   width: 100%;
   height: 20%;
   &__title {
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
+    @include flexbox();
   }
   &__logo {
     width: 11rem;
   }
 }
 .location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox();
   width: 100%;
   height: 50px;
   background-color: #f3f3f3;
-  box-shadow: inset 0px 11px 8px -10px $shadow;
+  @include boxShadow(inset 0px 11px 8px -10px $color-shadow);
   &__p {
     margin-left: 35px;
   }
@@ -92,7 +101,7 @@ body {
     cursor: pointer;
     &:hover {
       background-color: lighten($secondary-color, 60%);
-      box-shadow: 2px 5px 10px 0.5px $shadow;
+      @include boxShadow(2px 5px 10px 0.5px $color-shadow);
     }
   }
 }
@@ -109,7 +118,7 @@ body {
     margin: 1rem;
     padding: 1rem 1rem 1rem 0;
     border-radius: 15px;
-    box-shadow: 0px 2px 11px -1px $shadow;
+    @include boxShadow($shadow);
     cursor: pointer;
     list-style-type: none;
     counter-increment: number;
@@ -126,11 +135,9 @@ body {
       color: white;
       height: 1.5rem;
       width: 1.5rem;
-      display: flex;
       position: absolute;
       margin: -0.2rem 2rem 0rem -0.7rem;
-      align-items: center;
-      justify-content: center;
+      @include flexbox();
     }
   }
   &__listIcon {
@@ -146,7 +153,7 @@ body {
     border-radius: 15px 15px;
     background: white;
     margin: 1.5rem 0 1.5rem 0;
-    box-shadow: 0px 2px 11px -1px $shadow;
+    @include boxShadow($shadow);
   }
   &__picturesContainer {
     position: relative;
@@ -206,8 +213,7 @@ body {
   font: $font-logo-title;
 }
 .nav {
-  display: flex;
-  justify-content: center;
+  @include flexbox();
   &__containerIcon {
     cursor: pointer;
   }
@@ -247,13 +253,14 @@ body {
   padding: 0.2em;
   transition: transform 200ms;
   &:hover {
-    @include linearText;
+    @include linearText();
     background-color: $fortiary-color;
     padding: -0.2em;
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.2s ease-in-out;
     transform: scale(1.1);
+    cursor: pointer;
   }
 }
 .food {
@@ -278,7 +285,7 @@ body {
     border-radius: 15px;
     padding: 0.5rem;
     margin: 1rem 0 1rem 0;
-    box-shadow: 0px 2px 11px -1px $shadow;
+    @include boxShadow($shadow);
   }
   &__text {
     display: flex;
@@ -307,8 +314,7 @@ body {
   overflow: hidden;
 }
 .button {
-  display: flex;
-  justify-content: center;
+  @include flexbox();
   margin: 1.5rem 0 2rem 0;
   &__command {
     color: white;
@@ -322,7 +328,7 @@ body {
     cursor: pointer;
     &:hover {
       background-color: lighten($secondary-color, 60%);
-      box-shadow: 2px 5px 10px 0.5px $shadow;
+      @include boxShadow(2px 5px 10px 0.5px $color-shadow);
     }
   }
 }
