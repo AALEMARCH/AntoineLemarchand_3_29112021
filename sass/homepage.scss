@@ -36,6 +36,14 @@ $shadow: 0px 2px 11px -1px $color-shadow;
   justify-content: center;
   align-items: center;
 }
+@mixin button {
+  color: white;
+  background-color: $secondary-color;
+  border-radius: 30px 30px;
+  transition: background-color 200ms;
+  border: none;
+  cursor: pointer;
+}
 
 // ***************** homepage *************************
 * {
@@ -55,15 +63,10 @@ body {
   height: 100%;
 }
 .banner {
-  /*display: flex;
-  justify-content: center;*/
   @include flexbox();
   width: 100%;
   height: 20%;
   &__title {
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
     @include flexbox();
   }
   &__logo {
@@ -91,14 +94,9 @@ body {
     padding: 1.5rem 0 0 0;
   }
   &__button {
-    color: white;
-    background-color: $secondary-color;
-    border-radius: 30px 30px;
     padding: 1rem;
-    transition: background-color 200ms;
-    border: none;
-    @include linearGradient;
-    cursor: pointer;
+    @include button();
+    @include linearGradient();
     &:hover {
       background-color: lighten($secondary-color, 60%);
       @include boxShadow(2px 5px 10px 0.5px $color-shadow);
@@ -112,6 +110,9 @@ body {
   &__list {
     align-items: center;
     counter-reset: number;
+    @media screen and (min-width: 992px) {
+      @include flexbox();
+    }
   }
   &__listCards {
     background-color: $fortiary-color;
@@ -122,6 +123,9 @@ body {
     cursor: pointer;
     list-style-type: none;
     counter-increment: number;
+    @media screen and (min-width: 992px) {
+      width: 100%;
+    }
     &:hover {
       background-color: rgba($primary-color, $alpha: 0.1);
       & :nth-child(2n + 1) {
@@ -148,6 +152,15 @@ body {
   background-color: $fortiary-color;
   height: 100%;
   padding: 3rem 1.5rem 2rem 1.5rem;
+  &__contain {
+    @media screen and(min-width: 992px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+  }
   &__container {
     height: 100%;
     border-radius: 15px 15px;
@@ -187,6 +200,9 @@ body {
   background: #353535;
   display: flex;
   flex-direction: column;
+  @media screen and(min-width: 992px) {
+    align-items: center;
+  }
   &__title {
     font-family: $font-logo-title;
     font-weight: lighter;
@@ -317,15 +333,9 @@ body {
   @include flexbox();
   margin: 1.5rem 0 2rem 0;
   &__command {
-    color: white;
-    font-size: 1.5rem;
-    background-color: $secondary-color;
-    border-radius: 30px 30px;
     padding: 1rem 2.5rem;
-    transition: background-color 200ms;
-    border: none;
-    @include linearGradient;
-    cursor: pointer;
+    @include linearGradient();
+    @include button();
     &:hover {
       background-color: lighten($secondary-color, 60%);
       @include boxShadow(2px 5px 10px 0.5px $color-shadow);
