@@ -44,8 +44,18 @@ $shadow: 0px 2px 11px -1px $color-shadow;
   border: none;
   cursor: pointer;
 }
-
-// ***************** homepage *************************
+@mixin spaceLoader {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border-left: 4px solid transparent;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 100%;
+}
+// ***************** homepage **********************************************************
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,6 +69,60 @@ a {
 body {
   font-family: $font-text;
 }
+
+// *********************** loader *****************************************************
+.loader {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba($color: $fortiary-color, $alpha: 0.9);
+  @include flexbox();
+  overflow: hidden;
+  animation: loader 2.5s forwards;
+  &__container {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border-top: 4px solid transparent;
+    border-color: $primary-color;
+    animation: spin 2.5s linear infinite;
+    &::before {
+      @include spaceLoader();
+      border-color: $secondary-color;
+      animation: spin 1.5s linear infinite;
+    }
+    &::after {
+      @include spaceLoader();
+      border-color: $tertiary-color;
+      animation: spin-left 1.5s linear infinite;
+    }
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+// ************************************************************************************
 
 .main {
   height: 100%;
