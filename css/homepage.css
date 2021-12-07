@@ -353,6 +353,7 @@ body {
   background-color: #fafafa;
   z-index: 1;
   position: relative;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .main {
@@ -369,7 +370,7 @@ body {
   font-family: "Shrikhand";
   font-weight: 100;
 }
-@media screen and (min-width: 1450px) {
+@media screen and (min-width: 1550px) {
   .main__container {
     display: flex;
     justify-content: center;
@@ -429,7 +430,42 @@ body {
   border-radius: 15px;
   padding: 0.5rem;
   margin: 1rem 0 1rem 0;
+  animation: transform 1s ease-out forwards;
+  transform: scale(0);
+  cursor: pointer;
+  overflow: hidden;
   box-shadow: 0px 2px 11px -1px #ccc;
+}
+.meals__container--two {
+  animation-delay: 0.2s;
+}
+.meals__container--tree {
+  animation-delay: 0.3s;
+}
+.meals__container--for {
+  animation-delay: 0.4s;
+}
+.meals__container--six {
+  animation-delay: 0.2s;
+}
+.meals__container--seven {
+  animation-delay: 0.3s;
+}
+.meals__container--nine {
+  animation-delay: 0.2s;
+}
+.meals__container--ten {
+  animation-delay: 0.3s;
+}
+.meals__container:hover {
+  transform: scale(1) rotate(0deg);
+}
+.meals__container:hover span {
+  transform: translateX(0);
+  transform: rotate(0deg);
+}
+.meals__container:hover .blockAnim {
+  transform: translateX(0%);
 }
 .meals__text {
   display: flex;
@@ -441,6 +477,7 @@ body {
 .meals__price {
   padding: 2rem 1rem 0 1rem;
   font-weight: bold;
+  position: relative;
 }
 .meals .elipse {
   overflow: hidden;
@@ -448,20 +485,55 @@ body {
   text-overflow: ellipsis;
 }
 
+.one {
+  animation: transform 2s ease-out forwards 1s;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blockAnim {
+  height: 5rem;
+  background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -0.5rem;
+  border-radius: 0 15px 15px 0;
+  width: 5rem;
+  transition: transform 500ms ease-out 50ms;
+  transform: translateX(100%);
+}
+.blockAnim span {
+  display: inline-block;
+  transform: translateX(150%) rotate(180deg);
+  transition: transform 500ms ease-out 50ms;
+}
+.blockAnim__icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+@keyframes transform {
+  0% {
+    transform: scale(0) translateY(-10%);
+  }
+  100% {
+    transform: scale(1) translateY(20%);
+  }
+}
 .blockText {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   flex-grow: 1;
-}
-
-.blockAnim {
-  background: #99e2d0;
-  color: white;
-  width: 0;
-  overflow: hidden;
 }
 
 .button {
