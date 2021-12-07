@@ -388,8 +388,9 @@ body {
 .heartBase:hover {
   font-size: 1.5rem;
   background: -webkit-linear-gradient(-10deg, #9356dc, #ff79da);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   background-color: #fafafa;
   padding: -0.2em;
   font-size: 1.5rem;
@@ -435,10 +436,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 0.2rem 0 0 0.2rem;
+  overflow: hidden;
 }
 .meals__price {
   padding: 2rem 1rem 0 1rem;
   font-weight: bold;
+}
+.meals .elipse {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .blockText {
