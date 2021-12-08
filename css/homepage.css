@@ -29,7 +29,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(53, 53, 53, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,12 +39,12 @@ body {
 .loader__container {
   display: block;
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 200px;
+  height: 200px;
   border-radius: 100%;
-  border-top: 5px solid transparent;
-  border-color: #9356dc;
-  animation: spin 2.5s linear infinite;
+  border-top: 7px solid transparent;
+  border-top-color: #9356dc;
+  animation: spin 1.5s linear infinite;
 }
 .loader__container::before {
   content: "";
@@ -57,7 +57,7 @@ body {
   bottom: 10px;
   border-radius: 100%;
   border-color: #ff79da;
-  animation: spin 1.5s linear infinite;
+  animation: spin 1s linear infinite;
 }
 .loader__container::after {
   content: "";
@@ -70,7 +70,7 @@ body {
   bottom: 10px;
   border-radius: 100%;
   border-color: #99e2d0;
-  animation: spin-left 1.5s linear infinite;
+  animation: spin-left 0.5s linear infinite;
 }
 
 @keyframes loader {
@@ -198,7 +198,7 @@ body {
   counter-increment: number;
 }
 .functionning__listCards:hover {
-  background-color: rgba(147, 86, 220, 0.1);
+  background-color: #fff9fd;
 }
 .functionning__listCards:hover :nth-child(2n+1) {
   color: #9356dc;
@@ -370,7 +370,7 @@ body {
   font-family: "Shrikhand";
   font-weight: 100;
 }
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1600px) {
   .main__container {
     display: flex;
     justify-content: center;
@@ -385,6 +385,7 @@ body {
   font-size: 1.5rem;
   padding: 0.2em;
   transition: transform 200ms;
+  transform: scale(1);
 }
 .heartBase:hover {
   font-size: 1.5rem;
@@ -396,7 +397,7 @@ body {
   padding: -0.2em;
   font-size: 1.5rem;
   font-weight: bold;
-  transition: color 0.2s ease-in-out;
+  transition: color 3s ease-in-out -2s;
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -458,6 +459,7 @@ body {
   animation-delay: 0.3s;
 }
 .meals__container:hover {
+  background-color: #fff9fd;
   transform: scale(1) rotate(0deg);
 }
 .meals__container:hover span {
@@ -475,9 +477,8 @@ body {
   overflow: hidden;
 }
 .meals__price {
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 1.5rem 0 1rem;
   font-weight: bold;
-  position: relative;
 }
 .meals .elipse {
   overflow: hidden;
@@ -504,12 +505,11 @@ body {
   align-items: center;
   margin: -0.5rem;
   border-radius: 0 15px 15px 0;
-  width: 5rem;
+  width: 6rem;
   transition: transform 500ms ease-out 50ms;
   transform: translateX(100%);
 }
 .blockAnim span {
-  display: inline-block;
   transform: translateX(150%) rotate(180deg);
   transition: transform 500ms ease-out 50ms;
 }
