@@ -23,6 +23,9 @@ body {
 }
 
 .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -30,9 +33,6 @@ body {
   height: 100%;
   width: 100%;
   background: rgba(53, 53, 53, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   animation: loader 2.5s forwards;
 }
@@ -113,13 +113,13 @@ body {
 }
 
 .location {
+  box-shadow: inset 0px 11px 8px -10px #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 50px;
   background-color: #f3f3f3;
-  box-shadow: inset 0px 11px 8px -10px #ccc;
 }
 .location__p {
   margin-left: 35px;
@@ -145,7 +145,6 @@ body {
   padding: 1.5rem 0 0 0;
 }
 .explor__button {
-  padding: 1rem;
   color: white;
   background-color: #ff79da;
   border-radius: 30px 30px;
@@ -153,10 +152,11 @@ body {
   border: none;
   cursor: pointer;
   background-image: linear-gradient(-10deg, #9356dc, #ff79da);
+  padding: 1rem;
 }
 .explor__button:hover {
-  background-color: white;
   box-shadow: 2px 5px 10px 0.5px #ccc;
+  background-color: white;
 }
 
 .functionning {
@@ -188,11 +188,11 @@ body {
   }
 }
 .functionning__listCards {
+  box-shadow: 0px 2px 11px -1px #ccc;
   background-color: #fafafa;
   margin: 1rem;
   padding: 1rem 1rem 1rem 0;
   border-radius: 15px;
-  box-shadow: 0px 2px 11px -1px #ccc;
   cursor: pointer;
   list-style-type: none;
   counter-increment: number;
@@ -204,6 +204,9 @@ body {
   color: #9356dc;
 }
 .functionning__listCards:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   content: counter(number);
   background: #9356dc;
   border-radius: 100%;
@@ -212,9 +215,6 @@ body {
   width: 1.5rem;
   position: absolute;
   margin: -0.2rem 2rem 0rem -0.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .functionning__listIcon {
   padding: 0 1rem 0 2rem;
@@ -248,11 +248,11 @@ body {
   }
 }
 .cards__container {
+  box-shadow: 0px 2px 11px -1px #ccc;
   height: 100%;
   border-radius: 15px 15px;
   background: white;
   margin: 1.5rem 0 1.5rem 0;
-  box-shadow: 0px 2px 11px -1px #ccc;
 }
 .cards__picturesContainer {
   position: relative;
@@ -424,6 +424,7 @@ body {
   width: 100%;
 }
 .meals__container {
+  box-shadow: 0px 2px 11px -1px #ccc;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -435,7 +436,6 @@ body {
   transform: scale(0);
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 0px 2px 11px -1px #ccc;
 }
 .meals__container--two {
   animation-delay: 0.2s;
@@ -498,11 +498,11 @@ body {
 }
 
 .blockAnim {
-  height: 5rem;
-  background-color: #99e2d0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 5rem;
+  background-color: #99e2d0;
   margin: -0.5rem;
   border-radius: 0 15px 15px 0;
   width: 6rem;
@@ -543,7 +543,6 @@ body {
   margin: 1.5rem 0 2rem 0;
 }
 .button__command {
-  padding: 1rem 2.5rem;
   background-image: linear-gradient(-10deg, #9356dc, #ff79da);
   color: white;
   background-color: #ff79da;
@@ -551,10 +550,11 @@ body {
   transition: background-color 200ms;
   border: none;
   cursor: pointer;
+  padding: 1rem 2.5rem;
 }
 .button__command:hover {
-  background-color: white;
   box-shadow: 2px 5px 10px 0.5px #ccc;
+  background-color: white;
 }
 
 @media screen and (min-width: 768px) {

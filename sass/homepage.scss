@@ -77,6 +77,7 @@ body {
 
 // *********************** loader *****************************************************
 .loader {
+  @include flexbox();
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -84,7 +85,6 @@ body {
   height: 100%;
   width: 100%;
   background: rgba($color: #353535, $alpha: 0.4);
-  @include flexbox();
   overflow: hidden;
   animation: loader 2.5s forwards;
   &__container {
@@ -144,11 +144,11 @@ body {
   }
 }
 .location {
+  @include boxShadow(inset 0px 11px 8px -10px $color-shadow);
   @include flexbox();
   width: 100%;
   height: 50px;
   background-color: #f3f3f3;
-  @include boxShadow(inset 0px 11px 8px -10px $color-shadow);
   &__p {
     margin-left: 35px;
   }
@@ -170,12 +170,12 @@ body {
     padding: 1.5rem 0 0 0;
   }
   &__button {
-    padding: 1rem;
     @include button();
     @include linearGradient();
+    padding: 1rem;
     &:hover {
-      background-color: lighten($secondary-color, 60%);
       @include boxShadow(2px 5px 10px 0.5px $color-shadow);
+      background-color: lighten($secondary-color, 60%);
     }
   }
 }
@@ -201,11 +201,11 @@ body {
     }
   }
   &__listCards {
+    @include boxShadow($shadow);
     background-color: $fortiary-color;
     margin: 1rem;
     padding: 1rem 1rem 1rem 0;
     border-radius: 15px;
-    @include boxShadow($shadow);
     cursor: pointer;
     list-style-type: none;
     counter-increment: number;
@@ -217,6 +217,7 @@ body {
       }
     }
     &:before {
+      @include flexbox();
       content: counter(number);
       background: $primary-color;
       border-radius: 100%;
@@ -225,7 +226,6 @@ body {
       width: 1.5rem;
       position: absolute;
       margin: -0.2rem 2rem 0rem -0.7rem;
-      @include flexbox();
     }
   }
   &__listIcon {
@@ -255,11 +255,11 @@ body {
     }
   }
   &__container {
+    @include boxShadow($shadow);
     height: 100%;
     border-radius: 15px 15px;
     background: white;
     margin: 1.5rem 0 1.5rem 0;
-    @include boxShadow($shadow);
   }
   &__picturesContainer {
     position: relative;
@@ -409,6 +409,7 @@ body {
   height: 100%;
   width: 100%;
   &__container {
+    @include boxShadow($shadow);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -420,7 +421,6 @@ body {
     transform: scale(0);
     cursor: pointer;
     overflow: hidden;
-    @include boxShadow($shadow);
     &--two {
       animation-delay: 0.2s;
     }
@@ -479,9 +479,9 @@ body {
   justify-content: space-between;
 }
 .blockAnim {
+  @include flexbox();
   height: 5rem;
   background-color: $tertiary-color;
-  @include flexbox();
   margin: -0.5rem;
   border-radius: 0 15px 15px 0;
   width: 6rem;
@@ -519,12 +519,12 @@ body {
   @include flexbox();
   margin: 1.5rem 0 2rem 0;
   &__command {
-    padding: 1rem 2.5rem;
     @include linearGradient();
     @include button();
+    padding: 1rem 2.5rem;
     &:hover {
-      background-color: lighten($secondary-color, 60%);
       @include boxShadow(2px 5px 10px 0.5px $color-shadow);
+      background-color: lighten($secondary-color, 60%);
     }
   }
 }
