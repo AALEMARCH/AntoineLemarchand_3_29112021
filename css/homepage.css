@@ -268,8 +268,45 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  z-index: 0;
+}
+.cards__pict--alerte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 5rem;
+  height: 2rem;
+  background-color: #99e2d0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #299077;
+  border-radius: 1.5px 1.5px;
+  animation: light 1.5s ease-in infinite;
+  transform: scale(1);
 }
 
+@keyframes light {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .cards__textArea {
   background: white;
   border-radius: 0 0 15px 15px;
@@ -426,14 +463,14 @@ body {
 .meals__container {
   box-shadow: 0px 2px 11px -1px #ccc;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background-color: white;
   border-radius: 15px;
   padding: 0.5rem;
   margin: 1rem 0 1rem 0;
-  animation: transform 1s ease-out forwards;
+  animation: transform 1.5s ease-out forwards;
   transform: scale(0);
+  width: 100%;
   cursor: pointer;
   overflow: hidden;
 }
@@ -469,16 +506,25 @@ body {
 .meals__container:hover .blockAnim {
   transform: translateX(0%);
 }
+.meals__container:hover .meals__price {
+  transform: translateX(0%);
+}
 .meals__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.2rem 0 0 0.2rem;
   overflow: hidden;
+  width: 80%;
 }
 .meals__price {
-  padding: 2rem 1.5rem 0 1rem;
+  padding: 2rem 4.5rem 0 1rem;
   font-weight: bold;
+  transition: transform 500ms ease-out 50ms;
+  transform: translateX(100%);
+  position: relative;
+  right: 50px;
+  width: 20%;
 }
 .meals .elipse {
   overflow: hidden;
@@ -501,17 +547,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
   background-color: #99e2d0;
-  margin: -0.5rem;
+  margin-left: 0rem;
   border-radius: 0 15px 15px 0;
-  width: 6rem;
-  transition: transform 500ms ease-out 50ms;
+  width: 20%;
+  transition: transform 0.5s ease-out 50ms;
   transform: translateX(100%);
 }
 .blockAnim span {
   transform: translateX(150%) rotate(180deg);
-  transition: transform 500ms ease-out 50ms;
+  transition: transform 0.7s ease-in 100ms;
 }
 .blockAnim__icon {
   color: white;
@@ -527,7 +576,8 @@ body {
   }
 }
 .blockText {
-  width: 100%;
+  width: 80%;
+  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
