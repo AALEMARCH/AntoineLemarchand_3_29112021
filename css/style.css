@@ -20,6 +20,8 @@ a {
 
 body {
   font-family: "Roboto";
+  height: 100%;
+  width: 100%;
 }
 
 .loader {
@@ -379,7 +381,7 @@ body {
 .menu__pict {
   width: 100%;
   max-width: 100%;
-  max-height: 35rem;
+  max-height: 30rem;
   object-fit: cover;
 }
 
@@ -619,4 +621,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=homepage.css.map */
+/*# sourceMappingURL=style.css.map */
