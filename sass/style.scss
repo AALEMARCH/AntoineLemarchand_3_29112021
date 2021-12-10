@@ -514,11 +514,10 @@ body {
     width: 80%;
   }
   &__price {
-    padding: 2rem 4.5rem 0 1rem;
+    margin: 2rem 2rem 0rem 1rem;
     font-weight: bold;
     transition: transform 500ms ease-out 50ms;
     transform: translateX(100%);
-    position: relative;
     right: 50px;
     width: 20%;
   }
