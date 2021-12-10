@@ -34,9 +34,18 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(53, 53, 53, 0.4);
+  background: white;
   overflow: hidden;
   animation: loader 2.5s forwards;
+  /*&__text {
+    @include linearText();
+    @include flexbox();
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 5rem;
+    // color: $primary-color;
+  }*/
 }
 .loader__container {
   display: block;
