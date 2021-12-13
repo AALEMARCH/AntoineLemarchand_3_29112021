@@ -71,7 +71,7 @@ $shadow: 0px 2px 11px -1px $color-shadow;
   $letters: "o", "h", "m", "y", "f", "o", "o", "d", "!";
   @for $i from 1 through 9 {
     .letter-#{$i} {
-      @include linearText();
+      color: $tertiary-color;
       transition-delay: 0.1s * $i;
       transition-duration: 0.1s;
       text-transform: uppercase;
