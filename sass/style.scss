@@ -67,33 +67,15 @@ $shadow: 0px 2px 11px -1px $color-shadow;
     border-radius: 100%;
   }
 }
-@mixin test {
-  $letters: "o", "h", "m", "y", "f", "o", "o", "d";
-  @for $i from 1 through 8 {
-    #letter-#{$i} {
-      // animation-delay: 0.2s;
-      @keyframes hello {
-        0% {
-          transform: scale(0);
-          text-transform: lowercase;
-          color: $primary-color;
-        }
-        25% {
-          transform: scale(0.5);
-          text-transform: uppercase;
-          color: $secondary-color;
-        }
-        50% {
-          transform: scale(1);
-          text-transform: uppercase;
-          color: $secondary-color;
-        }
-        100% {
-          transform: scale(0.5);
-          text-transform: lowercase;
-          color: $tertiary-color;
-        }
-      }
+@mixin hello {
+  $letters: "o", "h", "m", "y", "f", "o", "o", "d", "!";
+  @for $i from 1 through 9 {
+    .letter-#{$i} {
+      @include linearText();
+      transition-delay: 0.1s * $i;
+      transition-duration: 0.1s;
+      text-transform: uppercase;
+      font-size: 2rem;
     }
   }
 }
@@ -127,15 +109,13 @@ body {
   overflow: hidden;
   animation: loader 2.5s forwards;
   &__text {
+    flex-direction: column;
     position: absolute;
     font-size: 2rem;
     text-align: center;
     &--title {
-      @include test();
-      animation: hello 3s forwards;
-      animation-delay: +0.1s;
-      transform: scale(1);
-      // text-transform: uppercase;
+      @include hello();
+      color: $primary-color;
     }
   }
   &__container {
