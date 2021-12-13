@@ -10,8 +10,8 @@
 
 <!-- lien page css / Normalize CSS / titre onglet / SEO--> 
     <title>ohmyfood</title>
-    <link rel="stylesheet" href="css/menupage.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
     <meta name="title" content="ohmyfood menupage">
 
 <!-- description recherche google / SEO -->
@@ -20,7 +20,205 @@
 <!-- font awesome link (icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="responsive">
+    <header>
+        <div class="nav">
+            <a class="nav__containerIcon"href="homepage.html" >
+                <i class="fas fa-arrow-left nav__icon"></i>
+            </a>
+            <h1><img src="../assets/logo/ohmyfood.png" alt="ohmyfood" class="nav__logo"></h1> 
+        </div>
+    </header>
+    <img src="../assets/images/note.jpg" alt="plat en sauce" class="menu__pict">
+    <main class="main">
+        <div class="main__header">
+            <h2 class="font">Le délice des sens</h2>
+            <i class="far fa-heart heartBase"></i> 
+        </div>
+        <div class="main__container">       
+            <section class="food">
+                <h3 class="food__title"><span class="food__line">Entr</span>ées</h3>
+                <div class="meals">
+                    <div class="meals__container meals__container--one">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Tartare de thon</strong></h3>
+                                <p class="elipse">Assaisonné au yuzu</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>25€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="meals__container meals__container--two">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Bouchée de homard croustillant</strong></h3>
+                                <p class="elipse">Et sa farandole de petits légumes</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>35€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="meals__container meals__container--tree">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Velouté de cèpes</strong></h3>
+                                <p class="elipse">Aux truffes</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>20€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="food">
+                <h3 class="food__title"><span class="food__line">Plat</span>s</h3>
+                <div class="meals meals--margin">
+                    <div class="meals__container  meals__container--five">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Poulet rôti aux herbes de Provence</strong></h3>
+                                <p class="elipse">Et sa crème de truffe</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>40€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="meals__container meals__container--six">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Langouste rôtie</strong></h3>
+                                <p class="elipse">Et ses légumes de saison</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>35€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="meals__container meals__container--seven">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Côte de boeuf Angus</strong></h3>
+                                <p class="elipse">Et sa purée de panais</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>44€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="food">
+                <h3 class="food__title"><span class="food__line">Dess</span>erts</h3>
+                <div class="meals">
+                    <div class="meals__container meals__container--eight">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Farandole de desserts</strong></h3>
+                                <p class="elipse">Du chef</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>18€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="meals__container meals__container--nine">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Crème brulée</strong></h3>
+                                <p class="elipse">Revisitée</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>22€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="meals__container meals__container--ten">
+                        <div class="blockText">
+                            <div class="meals__text">
+                                <h3 class="elipse"><strong>Tiramisu</strong></h3>
+                                <p class="elipse">À la noisette</p>
+                            </div>
+                            <div class="meals__price">
+                                <p>23€</p>
+                            </div>
+                        </div>
+                        <div class="blockAnim">
+                            <span>
+                                <i class="fas fa-check-circle blockAnim__icon"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+            <div class="button">
+                <button class="button__command">Commander</button>
+            </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h3 class="footer__title">ohmyfood</h3>
+            <div class="footer__text">
+                <i class="fas fa-utensils footer__logo"></i>
+                <a href="#" class="footer__link">Proposer un restaurant</a>
+            </div>
+            <div class="footer__text">
+                <i class="fas fa-hands-helping  footer__logo"></i>
+                <a href="#" class="footer__link">Devenir partenaire</a>
+            </div>
+            <div class="footer__text">
+                <a href="#" class="footer__link">Mentions légales</a>
+            </div>
+            <div class="footer__text">
+                <a href="mailto:lemarchand.antoine00@gmail.com" target="_blank" class="footer__link">Contact</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </body>
 </html>
