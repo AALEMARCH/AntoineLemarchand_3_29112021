@@ -21,8 +21,8 @@ $shadow: 0px 2px 11px -1px $color-shadow;
 //******************* mixins **************************
 
 @mixin linearText {
+  @include linearGradient();
   font-size: 1.5rem;
-  background: -webkit-linear-gradient(-10deg, $primary-color, $secondary-color);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -67,6 +67,37 @@ $shadow: 0px 2px 11px -1px $color-shadow;
     border-radius: 100%;
   }
 }
+@mixin test {
+  $letters: "o", "h", "m", "y", "f", "o", "o", "d";
+  @for $i from 1 through 8 {
+    #letter-#{$i} {
+      // animation-delay: 0.2s;
+      @keyframes hello {
+        0% {
+          transform: scale(0);
+          text-transform: lowercase;
+          color: $primary-color;
+        }
+        25% {
+          transform: scale(0.5);
+          text-transform: uppercase;
+          color: $secondary-color;
+        }
+        50% {
+          transform: scale(1);
+          text-transform: uppercase;
+          color: $secondary-color;
+        }
+        100% {
+          transform: scale(0.5);
+          text-transform: lowercase;
+          color: $tertiary-color;
+        }
+      }
+    }
+  }
+}
+
 // ***************** homepage **********************************************************
 * {
   box-sizing: border-box;
@@ -100,7 +131,11 @@ body {
     font-size: 2rem;
     text-align: center;
     &--title {
-      text-transform: uppercase;
+      @include test();
+      animation: hello 3s forwards;
+      animation-delay: +0.1s;
+      transform: scale(1);
+      // text-transform: uppercase;
     }
   }
   &__container {
@@ -364,7 +399,7 @@ body {
 
 //**************** page des menus *******************************
 .font {
-  font: $font-logo-title;
+  font-family: $font-logo-title;
 }
 .nav {
   @include flexbox();
@@ -427,7 +462,6 @@ body {
   &:hover {
     @include linearText();
     background-color: $fortiary-color;
-    padding: -0.2em;
     font-size: 1.5rem;
     font-weight: bold;
     transition: color 3s ease-in-out -2s;
@@ -545,7 +579,7 @@ body {
   transform: translateX(100%);
   span {
     transform: translateX(150%) rotate(180deg);
-    transition: transform 0.7s ease-in 100ms;
+    transition: transform 0.5s ease-in 100ms;
   }
   &__icon {
     color: white;
