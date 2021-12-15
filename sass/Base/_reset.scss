@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+body {
+  @include dimension(100%, $circle: false);
+  font-family: $font-text;
+}
+.main {
+  height: 100%;
+}

@@ -1,0 +1,60 @@
+.loader {
+  @include flexbox();
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  overflow: hidden;
+  animation: loader 2.5s forwards;
+  &__text {
+    flex-direction: column;
+    position: absolute;
+    font-size: 2rem;
+    text-align: center;
+    &--title {
+      @include hello();
+      color: $primary-color;
+      text-transform: lowercase;
+    }
+  }
+  &__container {
+    @include dimension(300px, $circle: true);
+    display: block;
+    position: relative;
+    border-top: 7px solid transparent;
+    border-top-color: $primary-color;
+    animation: spin 1.5s linear infinite;
+    &::before {
+      @include spaceLoader();
+      border-color: $secondary-color;
+      animation: spin 1s linear infinite;
+    }
+    &::after {
+      @include spaceLoader();
+      border-color: $tertiary-color;
+      animation: spin-left 0.5s linear infinite;
+    }
+  }
+}
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

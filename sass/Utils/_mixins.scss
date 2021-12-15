@@ -1,0 +1,70 @@
+@mixin linearText {
+  @include linearGradient();
+  font-size: 1.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+@mixin linearGradient {
+  background-image: linear-gradient(-10deg, $primary-color, $secondary-color);
+}
+@mixin boxShadow($params) {
+  box-shadow: $params;
+}
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin button {
+  color: white;
+  background-color: $secondary-color;
+  border-radius: 30px 30px;
+  transition: background-color 200ms;
+  border: none;
+  cursor: pointer;
+}
+@mixin spaceLoader {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border-left: 5px solid transparent;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 100%;
+}
+@mixin light($color, $amount) {
+  background-color: lighten($color, $amount);
+}
+@mixin dimension($size, $circle: false) {
+  width: $size;
+  height: $size;
+  @if $circle {
+    border-radius: 100%;
+  }
+}
+@mixin hello {
+  @for $i from 1 through 9 {
+    .letter-#{$i} {
+      color: $tertiary-color;
+      transition-delay: 0.08s * $i;
+      transition-duration: 0.2s;
+      text-transform: uppercase;
+      font-size: 2rem;
+      animation: break 2.5s forwards;
+    }
+    @keyframes break {
+      0% {
+        visibility: visible;
+      }
+      50% {
+        visibility: visible;
+      }
+      100% {
+        visibility: hidden;
+      }
+    }
+  }
+}
