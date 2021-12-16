@@ -14,12 +14,39 @@
     position: absolute;
     font-size: 2rem;
     text-align: center;
+
     &--title {
-      @include hello();
       color: $primary-color;
-      text-transform: lowercase;
     }
   }
+  span.letter-1 {
+    animation: hello 2.5s forwards 400ms;
+  }
+  span.letter-2 {
+    animation: hello 2.5s forwards 900ms;
+  }
+  span.letter-3 {
+    animation: hello 2.5s forwards 1400ms;
+  }
+  span.letter-4 {
+    animation: hello 2.5s forwards 1900ms;
+  }
+  @keyframes hello {
+    10% {
+      color: $tertiary-color;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      color: $tertiary-color;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+  }
+
   &__container {
     @include dimension(300px, $circle: true);
     display: block;
