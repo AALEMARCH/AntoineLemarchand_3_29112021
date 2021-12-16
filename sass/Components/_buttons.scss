@@ -4,10 +4,12 @@
   &__switch {
     @include linearGradient();
     @include button();
+    @include boxShadow(2px 3px 9px 0.4px $color-shadow);
     padding: 1rem 2rem;
     &:hover {
-      @include boxShadow(2px 5px 10px 0.5px $color-shadow);
+      @include boxShadow(2px 6px 13px 0.5px $color-shadow);
       @include light($secondary-color, 60);
+      opacity: 0.93;
     }
   }
 }
