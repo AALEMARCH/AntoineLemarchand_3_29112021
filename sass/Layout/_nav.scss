@@ -48,7 +48,7 @@
         color: $primary-color;
       }
     }
-    &:before {
+    &::before {
       @include flexbox();
       @include dimension(1.5rem, $circle: true);
       content: counter(number);

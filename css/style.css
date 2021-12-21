@@ -208,7 +208,7 @@ body {
 .functionning__listCards:hover :nth-child(2n+1) {
   color: #9356dc;
 }
-.functionning__listCards:before {
+.functionning__listCards::before {
   display: flex;
   justify-content: center;
   align-items: center;
