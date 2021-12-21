@@ -632,7 +632,6 @@ body {
 }
 .button__switch:hover {
   box-shadow: 2px 6px 13px 0.5px #ccc;
-  background-color: white;
   opacity: 0.93;
 }
 
