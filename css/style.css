@@ -147,6 +147,83 @@ body {
   margin-left: 35px;
 }
 
+/*
+.explor {
+  background-color: $fortiary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
+  @media screen and(min-width: 992px) {
+    height: 100%;
+    justify-content: center;
+    border-right: 3px solid #f3f3f3;
+    border-bottom: 10px solid #f3f3f3;
+  }
+}
+
+.functionning {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0;
+  @media screen and(min-width:992px) {
+    @include flexbox();
+    @include dimension(100%, $circle: false);
+    flex-direction: column;
+    background-color: $fortiary-color;
+    margin: 0;
+    border-left: 3px solid #f3f3f3;
+    border-bottom: 10px solid #f3f3f3;
+  }
+  &__list {
+    align-items: center;
+    counter-reset: number;
+    @media screen and (min-width: 992px) {
+      width: 80%;
+    }
+  }
+  &__listCards {
+    @include boxShadow($shadow);
+    background-color: $fortiary-color;
+    margin: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    border-radius: 15px;
+    cursor: pointer;
+    list-style-type: none;
+    counter-increment: number;
+    &:hover {
+      @include light($secondary-color, 25);
+      & :nth-child(2n + 1) {
+        color: $primary-color;
+      }
+    }
+    &::before {
+      @include flexbox();
+      @include dimension(1.5rem, $circle: true);
+      content: counter(number);
+      background: $primary-color;
+      color: white;
+      position: absolute;
+      margin: -0.2rem 2rem 0rem -0.7rem;
+    }
+  }
+  &__listIcon {
+    padding: 0 1rem 0 2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .functionning__text {
+    font-size: 0.9rem;
+  }
+}
+@media screen and(min-width: 992px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+*/
 .explor {
   background-color: #fafafa;
   display: flex;
@@ -159,13 +236,10 @@ body {
   .explor {
     height: 100%;
     justify-content: center;
-    border-right: 3px solid #f3f3f3;
-    border-bottom: 10px solid #f3f3f3;
   }
 }
 
 .functionning {
-  background-color: white;
   padding: 1.5rem;
   margin: 1rem 0 1rem 0;
 }
@@ -177,10 +251,6 @@ body {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    background-color: #fafafa;
-    margin: 0;
-    border-left: 3px solid #f3f3f3;
-    border-bottom: 10px solid #f3f3f3;
   }
 }
 .functionning__list {
@@ -189,7 +259,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .functionning__list {
-    width: 80%;
+    width: 60%;
   }
 }
 .functionning__listCards {
@@ -230,12 +300,6 @@ body {
     font-size: 0.9rem;
   }
 }
-@media screen and (min-width: 992px) {
-  nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
 .cards {
   background-color: #fafafa;
   height: 100%;
@@ -250,8 +314,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   .cards {
-    border-radius: 0 0 0 0;
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (min-width: 992px) {
