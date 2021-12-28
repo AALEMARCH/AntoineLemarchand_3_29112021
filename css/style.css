@@ -291,13 +291,18 @@ body {
   position: absolute;
   margin: -0.2rem 2rem 0rem -0.7rem;
 }
+.functionning__text {
+  font-weight: bold;
+}
 .functionning__listIcon {
   padding: 0 1rem 0 2rem;
+  color: grey;
 }
 
 @media screen and (max-width: 320px) {
   .functionning__text {
     font-size: 0.9rem;
+    font-weight: bold;
   }
 }
 .cards {
@@ -525,6 +530,7 @@ body {
 }
 .food__title {
   text-transform: uppercase;
+  font-weight: normal;
 }
 .food__line {
   border-bottom: 3.5px solid #99e2d0;
